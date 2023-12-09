@@ -16,4 +16,3 @@ person = Person("Fayzullo","Mamajonov",21,"Fergana")
 
 # person obyektining ma`lumotlarini olish uchun person_info() f-yasiga murojat qilindi
 print(person.person_info())
-        
