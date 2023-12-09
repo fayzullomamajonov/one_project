@@ -15,4 +15,19 @@ class Person:
 person = Person("Fayzullo","Mamajonov",21,"Fergana")
 
 # person obyektining ma`lumotlarini olish uchun person_info() f-yasiga murojat qilindi
-print(person.person_info())
+# print(person.person_info())
+
+
+# Person classidan vorish olib Students classini yaratamiz
+
+class Students(Person):
+    def __init__(self, f_name, l_name, age, country,univer,fackultet,course):
+        super().__init__(f_name, l_name, age, country)
+        self.univer = univer
+        self.fackultet = fackultet
+        self.course = course
+#  student_info() f-yasi talaba haqida ma`lumotlarni qaytaradi
+    def student_info(self):
+        return f"Student name: {self.f_name} {self.l_name}\nUniversity:{self.univer},{self.fackultet} {self.course}-course\nAge:{self.age}\nAddress:{self.country}"
+student = Students("Fayzullo","Mamajonov",21,"Fergana","TUIT","KIF",4)
+print(student.student_info())
